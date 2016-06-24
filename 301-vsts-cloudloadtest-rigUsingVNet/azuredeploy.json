@@ -92,7 +92,7 @@
             "location": "[resourceGroup().location]",
             "copy": {
                 "name": "publicAddressCopy",
-                "count": "[parameters('vmCount')]"
+                "count": "[parameters('agentCount')]"
             },
             "properties": {
                 "publicIPAllocationMethod": "[variables('publicIPAddressType')]"
@@ -105,7 +105,7 @@
             "location": "[resourceGroup().location]",
             "copy": {
                 "name": "nicCopy",
-                "count": "[parameters('vmCount')]"
+                "count": "[parameters('agentCount')]"
             },
             "properties": {
                 "ipConfigurations": [
@@ -134,7 +134,7 @@
             "location": "[resourceGroup().location]",
             "copy": {
                 "name": "vmCopy",
-                "count": "[parameters('vmCount')]"
+                "count": "[parameters('agentCount')]"
             },
             "properties": {
                 "hardwareProfile": {
@@ -197,7 +197,7 @@
             "location": "[resourceGroup().location]",
             "copy": {
                 "name": "vmCopy",
-                "count": "[parameters('vmCount')]"
+                "count": "[parameters('agentCount')]"
             },
             "properties": {
                 "publisher": "Microsoft.Compute",
@@ -209,7 +209,7 @@
                     "fileUris": [
                         "https://elsprodch2su1.blob.core.windows.net/ets-containerfor-loadagentresources/bootstrap/ConfigureUserLoadAgent.ps1"
                     ],
-                    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File .\\bootstrap\\ConfigureUserLoadAgent.ps1 -TeamServicesAccountUrl https://', parameters('VSTSAccountName'), '.elsdsinghal.tfs-int.tfsallin.net', ' -PATToken ', parameters('PATToken'))]"
+                    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File .\\bootstrap\\ConfigureUserLoadAgent.ps1 -TeamServicesAccountUrl https://', parameters('vstsAccountName'), '.elsdsinghal.tfs-int.tfsallin.net', ' -PATToken ', parameters('PAT'))]"
                 }
             },
             "dependsOn": [
