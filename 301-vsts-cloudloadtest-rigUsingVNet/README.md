@@ -1,9 +1,9 @@
 # Load test rig in a specific VNet for cloud-load test service
 
 [![Deploy to Azure](
-http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fdpksinghal%2fazure-quickstart-templates%2fmaster%2f301-vsts-clt-loadagentrig-ontargetvnet%2fazuredeploy.json)
+http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fdpksinghal%2farmtemplates%2fmaster%2f301-vsts-cloudloadtest-rigUsingVNet%2fazuredeploy.json)
 
-<a href="http://armviz.io/#/?load=https%3a%2f%2fraw.githubusercontent.com%2fdpksinghal%2fazure-quickstart-templates%2fmaster%2f301-vsts-clt-loadagentrig-ontargetvnet%2fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3a%2f%2fraw.githubusercontent.com%2fdpksinghal%2farmtemplates%2fmaster%2f301-vsts-cloudloadtest-rigUsingVNet%2fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
           
