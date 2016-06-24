@@ -33,7 +33,7 @@
 				"description":"Password for the virtual machine."
             }
         },
-        "existingVirtualNetworkResourceGroup": {
+        "existingVNetResourceGroupName": {
             "type": "String",
             "metadata": {
                 "description": "Name of the existing VNET resource group"
@@ -71,7 +71,7 @@
         "dataDisk1VhdName": "datadisk",
         "windowsOSVersion": "2012-R2-Datacenter",
         "OSDiskName": "osdisk",
-        "vnetID": "[resourceId(parameters('existingVirtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks', parameters('existingVirtualNetworkName'))]",
+        "vnetID": "[resourceId(parameters('existingVNetResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingVNetName'))]",
         "subnetRef": "[concat(variables('vnetID'),'/subnets/', parameters('subnetName'))]",
         "apiVersion": "2015-06-15"
     },

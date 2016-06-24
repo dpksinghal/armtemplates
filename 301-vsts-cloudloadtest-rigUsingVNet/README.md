@@ -19,8 +19,8 @@ Using this template, you can create your own load test rig on Azure IaaS virtual
     "agentCount": 1,
     "adminUsername": "<Admin user name>",
     "adminPassword": "<password>" 
-	"existingVirtualNetworkResourceGroup": "<Resource group name where the Vnet exists"
-	"existingVirtualNetworkName": "<VNet name>"
+	"existingVNetResourceGroupName": "<Resource group name where the Vnet exists"
+	"existingVNetName": "<VNet name>"
 	"subnetName": "<Subnet under VNet where you want to deployment load agents>"
 }
 ```
