@@ -2,36 +2,35 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "VSTSAccountName": {
+        "vstsAccountName": {
             "type": "String",
             "metadata": {
-                "description": "Please enter the VSTS account name without .visualstudio.com, e.g., 'xyz' is VSTS account name for 'xyz.visualstudio.com'"
+                "description": "Please enter the VSTS account name. If you access your VSTS account using 'https://yourAccountName.visualstudio.com', enter yourAccountName."
             }
         },
-        "PATToken": {
+        "PAT": {
             "type": "SecureString",
             "metadata": {
-                "description": "PATToken (under all scope) for the VSTS account. Please refer 'https://www.visualstudio.com/en-us/get-started/setup/use-personal-access-tokens-to-authenticate' for more details."
+                "description": "Personal Access Token (PAT) for the VSTS account. You should select the  scope as 'Load test (read and write)'. Please refer 'https://www.visualstudio.com/en-us/get-started/setup/use-personal-access-tokens-to-authenticate' for more details."
             }
         },
-        "vmCount": {
+        "agentCount": {
             "defaultValue": 1,
             "type": "Int",
             "metadata": {
-                "description": "Number of virtual machines"
+                "description":"Number of load generating agent machines to provision"
             }
         },
         "adminUsername": {
-            "defaultValue": "cltuser",
             "type": "String",
             "metadata": {
-                "description": "User name for an account on virtual machine(s)."
+				"description":"Username for the virtual machine."
             }
         },
         "adminPassword": {
             "type": "SecureString",
             "metadata": {
-                "description": "Password for the Virtual Machine."
+				"description":"Password for the virtual machine."
             }
         },
         "existingVirtualNetworkResourceGroup": {
@@ -40,10 +39,10 @@
                 "description": "Name of the existing VNET resource group"
             }
         },
-        "existingVirtualNetworkName": {
+        "existingVNetName": {
             "type": "String",
             "metadata": {
-                "description": "Name of the existing VNET"
+                "description": "Name of the existing VNet"
             }
         },
         "subnetName": {
