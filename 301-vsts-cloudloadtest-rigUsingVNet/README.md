@@ -1,4 +1,4 @@
-# Load test rig in a specific VNet for cloud-load test service
+# Load test rig in a specific VNet for testing private apps
 
 [![Deploy to Azure](
 http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fdpksinghal%2farmtemplates%2fmaster%2f301-vsts-cloudloadtest-rigUsingVNet%2fazuredeploy.json)
@@ -7,20 +7,20 @@ http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Micro
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
           
-<img src="https://raw.githubusercontent.com/dpksinghal/armtemplates/master/301-vsts-cloudloadtest-rigUsingVNet/CLTAgentsOnVnet.png"/>
+<img src="images/CLTAgentsOnVnet.png"/>
 <b> Load generators inside a user's virtual network </b>
 
-Using this template, you can create your own load test rig on Azure IaaS virtual machines in a specific VNet in order to load test applications that do not have a public end-point. The load generating agent machines will be created in the same VNet as your application. The test rig will be configured for your Visual Studio Team Services (VSTS) account and can be used to run cloud-based load tests using Visual Studio. The cloud-load testing service will use this registered rig instead of provisioning one dynamically.
+Using this template, you can create your own load test rig on Azure IaaS virtual machines in order to test applications that do not have a public end-point. The load generating agent machines will be created in the specified VNet. This VNet should have line of sight to the application you want to test. The test rig will be configured for your Visual Studio Team Services (VSTS) account and can be used to run cloud-based load tests using Visual Studio.
 
 ```json
 {
-    "vstsAccountName": "<VSTS account name using for CLT>",
-    "PAT": "<Get PAT token for VSTS account>",
-    "agentCount": 1,
-    "adminUsername": "<Admin user name>",
-    "adminPassword": "<password>" 
-	"existingVNetResourceGroupName": "<Resource group name where the Vnet exists"
-	"existingVNetName": "<VNet name>"
-	"subnetName": "<Subnet under VNet where you want to deployment load agents>"
+    "VSTSAccountName": "<VSTS account name using for CLT>",
+    "VSTSPersonalAccessToken": "<Get PAT token for VSTS account>",
+    "AgentCount": 1,
+    "AdminUsername": "<Admin user name>",
+    "AdminPassword": "<password>" 
+	"ExistingVNetResourceGroupName": "<Resource group name where the Vnet exists"
+	"ExistingVNetName": "<VNet name>"
+	"SubnetName": "<Subnet under VNet where you want to deployment load agents>"
 }
 ```

@@ -1,7 +1,7 @@
 {
-  "itemDisplayName": "VSTS-CloudLoadTest-RigUsingVNet",
-  "description": "This template can be used to provision azure VMs to run load test using VSTS CLT service.",
+  "itemDisplayName": "	VSTS-CloudLoadTest-SelfProvisionedRig-VNet-TestPrivateApps",
+  "description": "This template can be used to provision azure VMs to load test a private application.",
   "summary": "Yet to come",
   "githubUsername": "dpksinghal",
-  "dateUpdated": "2016-05-26"
+  "dateUpdated": "2016-06-27"
 }
