@@ -1,14 +1,12 @@
 # Useful scripts for VMs configured with CLT
 
-Script - GetStaticMachines.ps1
+##Script - GetStaticMachines.ps1
 
-Mandatory params:
-		a. TeamServicesAccountName
-		Please enter the VSTS account name. If you access your VSTS account using 'https://yourAccountName.visualstudio.com', enter yourAccountName.
-		b. PATToken
-		Personal Access Token (PAT) for the VSTS account. You should select the  scope as 'Load test (read and write)'. Please refer 'https://www.visualstudio.com/en-us/get-started/setup/use-personal-access-tokens-to-authenticate' for more details.
+### Mandatory params
+1. TeamServicesAccountName-Please enter the VSTS account name. If you access your VSTS account using 'https://yourAccountName.visualstudio.com', enter yourAccountName.
+2. PATToken - Personal Access Token (PAT) for the VSTS account. You should select the  scope as 'Load test (read and write)'. Please refer 'https://www.visualstudio.com/en-us/get-started/setup/use-personal-access-tokens-to-authenticate' for more details.
 	
-	Example:
+Example:
 	.\GetStaticMachines.ps1 -TeamServicesAccountName xyz -PATToken gzdw6bnzk2q73qsqxukmfonzycscdgmsl2quhqo24so7hrplcfdsatcq
 	
 	Sample Output:
