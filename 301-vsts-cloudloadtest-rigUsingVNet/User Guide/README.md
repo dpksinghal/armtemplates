@@ -6,7 +6,7 @@ One needs to add the following context parameter in the load test to route the r
 		<b> Parameter name – UseStaticLoadAgents
 		Parameter value – true </b>
 		
-<img src="images/contextParam.png"/>
+<img src="images/contextParam.PNG"/>
 
 The core count provided in the load test (through run settings) will be treated as the number of machines in case of self-provisioned agents scenario.
 
