@@ -3,8 +3,8 @@
 ##How to queue a run on self-provisioned VMs
 One needs to add the following context parameter in the load test to route the run on local/static agents.
 
-		<b> Parameter name – UseStaticLoadAgents
-		Parameter value – true </b>
+        Parameter name – UseStaticLoadAgents
+        Parameter value – true
 		
 <img src="images/contextParam.PNG"/>
 
